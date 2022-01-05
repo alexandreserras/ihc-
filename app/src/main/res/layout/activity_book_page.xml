@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookPage">
+
+    <FrameLayout
+        android:id="@+id/bookpage_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/bookpage_toolbar_back"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/back_content_description"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back_arrow"
+                tools:ignore="VectorDrawableCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/Book_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Book_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookpage_toolbar" />
+
+    <TextView
+        android:id="@+id/Book_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/Book_author"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Book_title" />
+
+    <ImageView
+        android:id="@+id/Book_cover"
+        android:layout_width="155dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Book_author"
+        app:srcCompat="@drawable/lusiadas" />
+
+    <TextView
+        android:id="@+id/Book_import_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/Book_import_date"
+        app:layout_constraintStart_toEndOf="@+id/Book_cover"
+        app:layout_constraintTop_toBottomOf="@+id/Book_author" />
+
+    <TextView
+        android:id="@+id/importar_imagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/importar_imagem"
+        app:layout_constraintStart_toEndOf="@+id/Book_cover"
+        app:layout_constraintTop_toBottomOf="@+id/Book_import_date" />
+
+    <Button
+        android:id="@+id/importar_imagem_botao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/importar_imagem_botao"
+        app:layout_constraintStart_toEndOf="@+id/Book_cover"
+        app:layout_constraintTop_toBottomOf="@+id/importar_imagem" />
+
+    <!--<Button
+        android:id="@+id/Start_read"
+        android:layout_width="161dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:onClick="readBookStart"
+        android:text="@string/Start_read"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toEndOf="@+id/Profiles"
+        app:layout_constraintTop_toBottomOf="@+id/importar_imagem_botao" />-->
+
+   <!-- <Button
+        android:id="@+id/Profiles"
+        android:layout_width="169dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/Profiles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Book_cover" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bookmarks"
+        android:layout_width="364dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profiles"
+        app:layout_constraintVertical_bias="0.633">
+
+        <TextView
+            android:id="@+id/Cabecalho_text"
+            android:layout_width="156dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Cabecalho_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="351dp"
+            android:layout_height="107dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Cabecalho_text"
+            app:layout_constraintVertical_bias="0.181">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/Add_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cabecalho_text"
+                    app:layout_constraintVertical_bias="0.439">
+
+                    <Button
+                        android:id="@+id/btn_alex"
+                        style="Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.70"
+                        android:onClick="readBookStart"
+                        android:text="@string/btn_alex" />
+
+                    <Button
+                        android:id="@+id/btn_del_alex"
+                        style="Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:text="@string/btn_del_alex" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/Add_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cabecalho_text"
+                    app:layout_constraintVertical_bias="0.439">
+
+                    <Button
+                        android:id="@+id/btn_bruno"
+                        style="Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.70"
+                        android:text="@string/btn_bruno" />
+
+
+                    <Button
+                        android:id="@+id/btn_del_bruno"
+                        style="Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:text="@string/btn_del_bruno" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/Add_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cabecalho_text"
+                    app:layout_constraintVertical_bias="0.439">
+
+                    <Button
+                        android:id="@+id/btn_joao"
+                        style="Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.70"
+                        android:text="@string/btn_joao" />
+
+
+                    <Button
+                        android:id="@+id/btn_del_joao"
+                        style="Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.30"
+                        android:text="@string/btn_del_joao" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/Add_button"
+            android:layout_width="174dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="164dp"
+            android:layout_marginEnd="172dp"
+            android:layout_marginRight="172dp"
+            android:text="@string/Add_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
